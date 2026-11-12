@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhrumil Savla — Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>DS<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title animate-on-scroll">
+                <span class="hero-greeting">Hello, I'm</span>
+                <span class="hero-name">Dhrumil Savla</span>
+                <span class="hero-role" id="typedRole"></span>
+            </h1>
+            <p class="hero-description animate-on-scroll">
+                Software Engineer specializing in backend development, microservices architecture,
+                and AI-driven solutions. Passionate about building scalable systems that solve real-world problems.
+            </p>
+            <div class="hero-cta animate-on-scroll">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat">
+                    <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Months Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Major Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="10">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator animate-on-scroll">
+            <div class="scroll-line"></div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <p>
+                        I'm a <strong>Software Engineer</strong> with a BTech in Computer Engineering from
+                        <strong>NMIMS University</strong>. I specialize in building high-performance backend systems,
+                        scalable microservices, and AI-powered applications.
+                    </p>
+                    <p>
+                        At <strong>LogisticsNow Pvt. Ltd.</strong>, I worked on the Lorri Logistics Platform,
+                        where I developed production-grade APIs, optimized MongoDB pipelines, and designed
+                        configurable microservices for TMS modules that improved scalability and operational efficiency.
+                    </p>
+                    <p>
+                        I'm deeply interested in leveraging <strong>AI/ML</strong> to solve complex problems — from
+                        supply chain optimization to legal document automation. I enjoy working across the full stack
+                        of backend engineering, from API design to cloud deployment.
+                    </p>
+                </div>
+                <div class="about-highlights animate-on-scroll">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Backend Engineering</h3>
+                        <p>FastAPI, Spring Boot, REST APIs, Microservices</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                        <p>Docker, Kubernetes, Azure DevOps, CI/CD</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3>AI & Machine Learning</h3>
+                        <p>NLP, Deep Learning, RAG, Predictive Models</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">02</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <!-- Full-time Role -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot active"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-date">Jun 2026 – Sept 2026</span>
+                                <h3 class="timeline-role">Software Engineer — Backend Developer</h3>
+                                <p class="timeline-company">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    LogisticsNow Pvt. Ltd. | Lorri Logistics Platform
+                                </p>
+                            </div>
+                            <span class="timeline-badge">Full-time</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Managed production deployments and feature releases through Azure DevOps, collaborating
+                                with cross-functional teams.</li>
+                            <li>Completed ULIP integration and migrated cron triggers from GKE to AKS, improving
+                                platform integration and deployment infrastructure.</li>
+                            <li>Built automated weekly and daily dashboard reporting with graphs embedded in email
+                                bodies, improving client reporting.</li>
+                            <li>Designed TMS features for clients and transporters, enhancing shipment tracking,
+                                procurement, and invoice workflows.</li>
+                            <li>Implemented Spot Module Optimization using lightweight data structures and
+                                high-performance APIs, reducing processing overhead.</li>
+                            <li>Built and optimized configurable microservices for Indent, Tracking, and Spot modules.
+                            </li>
+                            <li>Developed scalable REST APIs with FastAPI and optimized MongoDB queries, improving
+                                backend performance.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Azure DevOps</span>
+                            <span class="tag">Microservices</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-date">Dec 2025 – Jun 2026</span>
+                                <h3 class="timeline-role">Software Engineer Intern — Backend Developer</h3>
+                                <p class="timeline-company">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    LogisticsNow Pvt. Ltd. | Lorri Logistics Platform
+                                </p>
+                            </div>
+                            <span class="timeline-badge intern">Internship</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed backend APIs and features using FastAPI, Python, and MongoDB for logistics and
+                                transportation workflows.</li>
+                            <li>Contributed to TMS modules for client, transporter, procurement, and shipment operations
+                                while collaborating on production releases.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">03</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card animate-on-scroll" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-featured-tag">Featured</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Personal Finance Management System</h3>
+                    <p class="project-description">
+                        A microservices-based personal finance platform enabling users to manage income, expenses,
+                        budgets, and financial transactions through a scalable service-oriented architecture. Features
+                        independent services for user management, transaction processing, budgeting, and reporting.
+                    </p>
+                    <ul class="project-features">
+                        <li>Spring Boot microservices with Eureka Server service discovery</li>
+                        <li>Containerized with Docker, orchestrated with Kubernetes</li>
+                        <li>Scalable, fault-tolerant deployment workflows</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Spring Boot</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>MySQL</span>
+                        <span>Eureka Server</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card animate-on-scroll" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-featured-tag">Featured</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Supply Chain Management using ML</h3>
+                    <p class="project-description">
+                        An intelligent supply chain optimization system to improve inventory planning, demand
+                        forecasting,
+                        and operational efficiency. Built predictive models for forecasting product demand and
+                        identifying
+                        anomalies in supply chain operations.
+                    </p>
+                    <ul class="project-features">
+                        <li>LSTM, Random Forest & XGBoost for demand forecasting</li>
+                        <li>Data processing pipelines for large datasets</li>
+                        <li>Modular analytics architecture for predictive decision-making</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>LSTM</span>
+                        <span>Random Forest</span>
+                        <span>XGBoost</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card animate-on-scroll" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-featured-tag">Featured</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">AI Rent Agreement Generator & Analyzer</h3>
+                    <p class="project-description">
+                        An AI-powered legal document automation platform capable of generating, analyzing, and
+                        validating
+                        rental agreements using NLP and Retrieval-Augmented Generation (RAG). Features automated clause
+                        extraction, compliance verification, and risk assessment.
+                    </p>
+                    <ul class="project-features">
+                        <li>NLP-based entity recognition & clause extraction</li>
+                        <li>Interactive Q&A system with context-aware legal insights</li>
+                        <li>Scalable FastAPI backend for document processing</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>RAG</span>
+                        <span>FastAPI</span>
+                        <span>Deep Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">04</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill" data-level="expert">Python</span>
+                        <span class="skill-pill" data-level="advanced">Java</span>
+                        <span class="skill-pill" data-level="intermediate">C++</span>
+                        <span class="skill-pill" data-level="intermediate">C</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Backend & Frameworks</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill" data-level="expert">FastAPI</span>
+                        <span class="skill-pill" data-level="advanced">Spring Boot</span>
+                        <span class="skill-pill" data-level="expert">REST API Design</span>
+                        <span class="skill-pill" data-level="advanced">Microservices</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                        <h3>Data & Analytics</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill" data-level="expert">MongoDB</span>
+                        <span class="skill-pill" data-level="advanced">MySQL</span>
+                        <span class="skill-pill" data-level="intermediate">Tableau</span>
+                        <span class="skill-pill" data-level="intermediate">Data Analytics</span>
+                        <span class="skill-pill" data-level="intermediate">Data Warehousing</span>
+                        <span class="skill-pill" data-level="advanced">DBMS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>DevOps & Tools</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill" data-level="advanced">Docker</span>
+                        <span class="skill-pill" data-level="advanced">Kubernetes</span>
+                        <span class="skill-pill" data-level="advanced">Azure DevOps</span>
+                        <span class="skill-pill" data-level="expert">Git</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3>AI & Machine Learning</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill" data-level="advanced">Pandas</span>
+                        <span class="skill-pill" data-level="advanced">NumPy</span>
+                        <span class="skill-pill" data-level="advanced">Scikit-learn</span>
+                        <span class="skill-pill" data-level="intermediate">LSTM</span>
+                        <span class="skill-pill" data-level="intermediate">XGBoost</span>
+                        <span class="skill-pill" data-level="intermediate">Random Forest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">05</span>
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card animate-on-scroll">
+                    <div class="edu-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <div class="edu-details">
+                        <h3>BTech Computer Engineering</h3>
+                        <p class="edu-school">MPSTME, NMIMS University</p>
+                        <div class="edu-meta">
+                            <span class="edu-year">2023 – 2026</span>
+                            <span class="edu-gpa">CGPA: 3.69 / 4.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-card animate-on-scroll">
+                    <div class="edu-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <div class="edu-details">
+                        <h3>Diploma Computer Engineering</h3>
+                        <p class="edu-school">MPSTME, NMIMS University</p>
+                        <div class="edu-meta">
+                            <span class="edu-year">2020 – 2023</span>
+                            <span class="edu-gpa">CGPA: 3.70 / 4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="cert-section animate-on-scroll">
+                <h3 class="cert-title">Certifications & Leadership</h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <span>Microsoft Azure Fundamentals (AZ-900)</span>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <span>Tableau Data Analyst Desktop Certification Prep</span>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <span>AI with Python – Great Learning</span>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon leadership">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <span>Sub Head PR — GDSC, NMIMS</span>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon leadership">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <span>Senior Executive PR — ACM, NMIMS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">06</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content animate-on-scroll">
+                <p class="contact-description">
+                    I'm currently open to new opportunities and always excited to collaborate on interesting projects.
+                    Whether you have a question, a project idea, or just want to say hello — feel free to reach out!
+                </p>
+                <div class="contact-cards">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhrumil4088@gmail.com" target="_blank" rel="noopener" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <span>dhrumil4088@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="tel:+917045614403" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <span>+91 7045614403</span>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/dhrumil-savla-839b27223/" target="_blank" rel="noopener"
+                        class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <span>Connect with me</span>
+                        </div>
+                    </a>
+                </div>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhrumil4088@gmail.com&su=Hello%20Dhrumil%20%E2%80%93%20Let%27s%20Connect&body=Hi%20Dhrumil%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect!%0A%0A" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+                    <span>Say Hello</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>DS<span class="logo-bracket"> /&gt;</span>
+                </a>
+                <p class="footer-text">Designed & Built by Dhrumil Savla</p>
+                <div class="footer-socials">
+                    <a href="mailto:dhrumil4088@gmail.com" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/dhrumil-savla-839b27223/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
